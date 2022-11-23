@@ -306,7 +306,7 @@ FOOTER
 footer {
     background-color: #dcdcdc;
     display: flex;
-    padding: 0 0;
+    padding:  0;
 }
 
 
@@ -324,7 +324,15 @@ footer {
 
 }
 
-.footer__social--link,
-.footer__copyright {
+.footer__container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.footer__social--link {
     color: rgb(236, 6, 83);
+    justify-content: space-around;
 }
