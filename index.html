@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurami Kiknadze</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+    emailjs.init("yBtIX7eeMg3G6dYem");
+})();
+</script>
 </head>
 <body>
     <section id="landing-page">
@@ -59,7 +68,7 @@
             </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </div>
         <button>
@@ -97,14 +106,14 @@ I currently work on extremely difficult <b class="purple">engineering problems</
                 <h3 class="modal__titlee modal__subtitle--contact">
                     I'm currently open to new opportunities.
                 </h3>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
                         <input class="input" name="user_name" type="text" required></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" name="user_email" type="text" required></input>
+                        <input class="input" name="user_email" type="email" required></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
@@ -112,7 +121,14 @@ I currently work on extremely difficult <b class="purple">engineering problems</
                     </div>
                     <button id="contact__submit" class="form__submit">Send it my way</button>
                 </form>  
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! looking forward to speaking to you soon.
+                </div>
             </div>
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
         </div>
     </section>
     <section id="projects">
