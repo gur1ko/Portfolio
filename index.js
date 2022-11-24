@@ -2,6 +2,11 @@
 // service_qb0dndl
 // yBtIX7eeMg3G6dYem
 
+
+
+
+
+
 let isModalOpen = false;
 let contrastToggle = false;
 
@@ -10,7 +15,8 @@ function toggleContrast() {
     if (contrastToggle) {
         document.body.classList += " dark-theme"
     }
-else { document.body.classList += " dark-theme"
+else { 
+    document.body.classList.remove("dark-theme");
 }
 }
 
