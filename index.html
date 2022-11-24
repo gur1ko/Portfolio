@@ -17,7 +17,7 @@
 })();
 </script>
 </head>
-<body>
+<body >
     <section id="landing-page">
         <nav>
             <figure>
@@ -25,13 +25,13 @@
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black">Projects</a>
@@ -40,9 +40,9 @@
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
-                    link__hover-effect--black">Contact</a>
+                    link__hover-effect--black" onclick="toggleModal()">Contact</a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleContras()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -56,7 +56,7 @@
                 <h1 class="title purple">I'm Gurami.</h1>
                 <p class="header__para">I'm a <b class="purple">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences
                 <br>
-                Here's a bit more <b class="purple">about me</b>
+                Here's a bit more <b class="purple click" onclick="toggleModal()">about me</b>
             </p>
             <div class="social__list">
                 <a href="https://www.linkedin.com/in/gurami-kiknadze-3486a423b/" target="_blank" class="social__link click"><i class="fab fa-linkedin-in"></i>
@@ -117,7 +117,7 @@ I currently work on extremely difficult <b class="purple">engineering problems</
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="user_message" type="text" required></textarea>
+                        <textarea class="text" name="message" type="text" required></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Send it my way</button>
                 </form>  
